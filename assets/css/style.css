@@ -1,3 +1,20 @@
-body {
-  background-color: red;
+.logo {
+  padding-left: 15px;
+  font-weight: bold;
+}
+
+.container {
+  border: solid 1px #000;
+  margin-top: 35px;
+  padding: 25px;
+}
+
+.img-paper-scissor {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.img-rock {
+  display: flex;
+  justify-content: center;
 }
