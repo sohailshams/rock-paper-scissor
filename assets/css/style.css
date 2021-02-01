@@ -17,8 +17,13 @@
 .img-rock {
   display: flex;
   justify-content: center;
+  margin-bottom: 15px;
 }
 
+img:hover {
+  box-shadow: 0 0 11px #4a148c;
+  cursor: pointer;
+}
 @media (max-width: 375px) {
   .img-rock,
   .img-scissor > img,
