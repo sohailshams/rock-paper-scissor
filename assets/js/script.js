@@ -2,7 +2,9 @@ function rpsGame(yourChoice) {
   let userChoice, pcChoice;
   userChoice = yourChoice.id;
   pcChoice = numberToChoice(randomToIntiger());
-  let result = winner(userChoice, pcChoice);
+  result = winner(userChoice, pcChoice);
+  message = winnerMessage(result);
+  console.log(message);
 }
 
 function randomToIntiger() {
@@ -34,4 +36,14 @@ function winner(userChoice, pcChoice) {
   let userScore = gameData[userChoice][pcChoice];
   let pcScore = gameData[pcChoice][userChoice];
   return [userScore, pcScore];
+}
+
+function winnerMessage([userScore, pcScore]) {
+  if (userScore > pcScore) {
+    return { message: 'You Won', color: 'green' };
+  } else if (userScore === pcScore) {
+    return { message: 'Tie', color: 'grey' };
+  } else {
+    return { message: 'You Lost', color: 'red' };
+  }
 }
