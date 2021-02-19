@@ -4,7 +4,7 @@ function rpsGame(yourChoice) {
   pcChoice = numberToChoice(randomToIntiger());
   result = winner(userChoice, pcChoice);
   message = winnerMessage(result);
-  console.log(message);
+  imageMessage(userChoice, pcChoice, message);
 }
 
 function randomToIntiger() {
@@ -16,7 +16,7 @@ function numberToChoice(number) {
 }
 
 function winner(userChoice, pcChoice) {
-  var gameData = {
+  let gameData = {
     rock: {
       scissor: 1,
       rock: 0.5,
@@ -42,8 +42,44 @@ function winnerMessage([userScore, pcScore]) {
   if (userScore > pcScore) {
     return { message: 'You Won', color: 'green' };
   } else if (userScore === pcScore) {
-    return { message: 'Tie', color: 'grey' };
+    return { message: 'Tie', color: 'blue' };
   } else {
     return { message: 'You Lost', color: 'red' };
   }
+}
+
+function imageMessage(yourChoice, pcChoice, message) {
+  let imageData = {
+    rock: document.getElementById('rock').src,
+    paper: document.getElementById('paper').src,
+    scissor: document.getElementById('scissor').src,
+  };
+
+  // remove images on click
+  document.getElementById('rock').remove();
+  document.getElementById('paper').remove();
+  document.getElementById('scissor').remove();
+
+  let userDiv = document.createElement('div');
+  let pcDiv = document.createElement('div');
+  let messageDiv = document.createElement('div');
+
+  userDiv.innerHTML =
+    "<img src='" +
+    imageData[yourChoice] +
+    "' height=160 style='box-shadow:0px 10px 50px rgba(86 22 189 / 87%); margin-right: 10px'>";
+  messageDiv.innerHTML =
+    "<h1 style='color: " +
+    message['color'] +
+    "; font-size: 60px; padding: 30px; text-align:center'>" +
+    message['message'] +
+    '</h1>';
+  pcDiv.innerHTML =
+    "<img src='" +
+    imageData[pcChoice] +
+    "' height=160 style='box-shadow:0px 10px 50px rgba(236 33 33 / 87%); '>";
+
+  document.getElementById('final-image1').appendChild(userDiv);
+  document.getElementById('final-message').appendChild(messageDiv);
+  document.getElementById('final-image2').appendChild(pcDiv);
 }
