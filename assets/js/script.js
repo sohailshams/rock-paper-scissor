@@ -5,6 +5,7 @@ function rpsGame(yourChoice) {
   result = winner(userChoice, pcChoice);
   message = winnerMessage(result);
   imageMessage(userChoice, pcChoice, message);
+  refreshButton();
 }
 
 function randomToIntiger() {
@@ -71,7 +72,7 @@ function imageMessage(yourChoice, pcChoice, message) {
   messageDiv.innerHTML =
     "<h1 style='color: " +
     message['color'] +
-    "; font-size: 60px; padding: 30px; text-align:center'>" +
+    "; font-size: 50px; text-align:center'>" +
     message['message'] +
     '</h1>';
   pcDiv.innerHTML =
@@ -82,4 +83,16 @@ function imageMessage(yourChoice, pcChoice, message) {
   document.getElementById('final-image1').appendChild(userDiv);
   document.getElementById('final-message').appendChild(messageDiv);
   document.getElementById('final-image2').appendChild(pcDiv);
+}
+
+function refreshButton() {
+  let reloadButton = document.createElement('input');
+  reloadButton.setAttribute('type', 'button');
+  reloadButton.setAttribute('name', 'name');
+  reloadButton.setAttribute('value', "Let's play Again");
+  reloadButton.setAttribute('class', 'btn-refresh');
+  reloadButton.onclick = function () {
+    document.location.reload();
+  };
+  document.getElementById('final-message').appendChild(reloadButton);
 }
