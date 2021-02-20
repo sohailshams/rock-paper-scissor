@@ -6,6 +6,7 @@ function rpsGame(yourChoice) {
   message = winnerMessage(result);
   imageMessage(userChoice, pcChoice, message);
   refreshButton();
+  fontResize();
 }
 
 function randomToIntiger() {
@@ -95,4 +96,9 @@ function refreshButton() {
     document.location.reload();
   };
   document.getElementById('final-message').appendChild(reloadButton);
+}
+
+function fontResize() {
+  let resizeFont = document.getElementById('rock-img');
+  resizeFont.classList.remove('img-rock');
 }
