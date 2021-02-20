@@ -14,20 +14,28 @@
   justify-content: space-evenly;
 }
 
+.img-paper > img,
+.img-scissor > img {
+  height: 160px;
+}
+
 .img-rock {
   display: flex;
   justify-content: center;
   margin-bottom: 15px;
+  height: 160px;
 }
 
 img:hover {
   box-shadow: 0 0 11px #4a148c;
   cursor: pointer;
 }
-@media (max-width: 375px) {
-  .img-rock,
-  .img-scissor > img,
-  .img-paper > img {
-    height: 125px;
-  }
+
+.btn-refresh {
+  background-color: #4a148c;
+  color: white;
+  padding: 8px;
+  border: none;
+  margin: 5px auto;
+  display: flex;
 }
