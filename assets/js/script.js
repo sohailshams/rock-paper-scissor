@@ -73,7 +73,7 @@ function imageMessage(yourChoice, pcChoice, message) {
   messageDiv.innerHTML =
     "<h1 style='color: " +
     message['color'] +
-    "; font-size: 50px; text-align:center'>" +
+    "; font-size: 50px; font-family: Akaya Telivigala; text-align:center'>" +
     message['message'] +
     '</h1>';
   pcDiv.innerHTML =
