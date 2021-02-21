@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
 body {
   display: flex;
   min-height: 100vh;
@@ -16,6 +17,10 @@ section {
   height: 55px;
   padding-top: 5px;
   object-fit: contain;
+}
+
+.right > li > a {
+  font-family: 'Akaya Telivigala', sans-serif;
 }
 
 .container {
@@ -62,6 +67,7 @@ img:hover {
 .copyright-text {
   padding-left: 15px;
   color: #fff;
+  font-family: 'Akaya Telivigala', sans-serif;
 }
 
 .footer-links {
