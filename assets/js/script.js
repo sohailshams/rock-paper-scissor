@@ -44,7 +44,7 @@ function winnerMessage([userScore, pcScore]) {
   if (userScore > pcScore) {
     return { message: 'You Won', color: 'green' };
   } else if (userScore === pcScore) {
-    return { message: 'Tie', color: 'blue' };
+    return { message: 'Draw', color: 'blue' };
   } else {
     return { message: 'You Lost', color: 'red' };
   }
