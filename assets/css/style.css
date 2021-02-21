@@ -1,3 +1,12 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+section {
+  flex: 1 0 auto;
+}
 .logo {
   padding-left: 15px;
   font-weight: bold;
@@ -44,4 +53,33 @@ img:hover {
   border: none;
   margin: 5px auto;
   display: flex;
+}
+
+.page-footer {
+  padding-top: 0 !important;
+}
+
+.copyright-text {
+  padding-left: 15px;
+  color: #fff;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-links > div:first-child {
+  padding-right: 35px;
+  font-size: 200%;
+  color: #fff !important;
+}
+
+.footer-links > div:last-child {
+  padding-right: 15px;
+  font-size: 200%;
+}
+
+.footer-links > div > a {
+  color: #fff;
 }
