@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
+/*-----------------sticky footer*/
+
 body {
   display: flex;
   min-height: 100vh;
@@ -8,6 +11,9 @@ body {
 section {
   flex: 1 0 auto;
 }
+
+/*-----------------navbar*/
+
 .logo {
   padding-left: 15px;
   font-weight: bold;
@@ -22,6 +28,8 @@ section {
 .right > li > a {
   font-family: 'Akaya Telivigala', sans-serif;
 }
+
+/*-----------------boody styling*/
 
 .container {
   border: solid 1px #000;
@@ -60,6 +68,8 @@ img:hover {
   display: flex;
 }
 
+/*-----------------footer*/
+
 .page-footer {
   padding-top: 0 !important;
 }
@@ -88,4 +98,21 @@ img:hover {
 
 .footer-links > div > a {
   color: #fff;
+}
+
+/*-----------------particle js*/
+
+.outer-container {
+  position: relative;
+}
+#particles-js {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+.outer-container .container {
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
 }
