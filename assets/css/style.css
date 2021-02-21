@@ -3,6 +3,12 @@
   font-weight: bold;
 }
 
+.logo > img {
+  height: 55px;
+  padding-top: 5px;
+  object-fit: contain;
+}
+
 .container {
   border: solid 1px #000;
   margin-top: 35px;
