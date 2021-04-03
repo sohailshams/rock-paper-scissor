@@ -87,11 +87,6 @@ function imageMessage(yourChoice, pcChoice, message) {
 }
 
 function refreshButton() {
-  let reloadButton = document.createElement('input');
-  reloadButton.setAttribute('type', 'button');
-  reloadButton.setAttribute('name', 'name');
-  reloadButton.setAttribute('value', "Let's play Again");
-  reloadButton.setAttribute('class', 'btn-refresh');
   reloadButton.onclick = function () {
     document.location.reload();
   };
